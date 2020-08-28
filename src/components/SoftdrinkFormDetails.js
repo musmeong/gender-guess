@@ -3,7 +3,6 @@ import logo from '../genie.png';
 import '../AppForm.css';
 
 import * as tf from '@tensorflow/tfjs';
-// import * as tfn from '@tensorflow/tfjs-node';
 
 import modeltf from "../models/model.json";
 import sprite from "../assets/sprite.jpg";
@@ -35,16 +34,6 @@ class SoftdrinkFormDetails extends Component {
     this.props.prevStep();
   };
 
-  // loadModeltf() {
-  //   const modelLoad = async () => {
-  //     const model = await tf.loadLayersModel(modeltf);
-  //     // const example = tf.tensor2d([[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]]);
-  //     // this.setState({predictValue: example});
-  //   };
-  //   modelLoad();
-  // }
-  
-
   render() {
     const {
       values: { color, music, beverage, softdrink }
@@ -52,7 +41,6 @@ class SoftdrinkFormDetails extends Component {
 
     
     const loadModeltf = async () => {
-      // const handler = tf.io.browserFiles(modeltf);
       const modelok = await tf.loadLayersModel('https://raw.githubusercontent.com/musmeong/gender-guess/master/src/models/model.json');
       return modelok;
     };
@@ -61,38 +49,12 @@ class SoftdrinkFormDetails extends Component {
 
     modelok.then(function (res) {
       const data_test = tf.tensor([[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]]);
-      // const example = tf.reshape(data_test, [1,20]);
-      // console.log(data_test.shape);
-      // console.log(new Uint8Array(buffer))
       const example = data_test;
-      // console.log(example);
       const prediction = res.predict(example);
       console.log(prediction.dataSync());
     }, function (err) {
       console.log(err);
     })
-
-    // await model = tf.loadLayersModel(modeltf);
-
-    // this.loadModeltf();
-    // loadModel;
-    
-
-    // const handlePredict = () => {
-    //   // Use the model to do inference on a data point the model hasn't seen before:
-    //   const predictedValue = modelState.model.predict(tf.tensor2d()).arraySync()[0][0];
-  
-    //   setModelState({
-    //       ...modelState,
-    //       predictedValue: predictedValue,
-    //   });
-    // }
-    // for(let i=0; i<=2; i++){
-    // console.log(this.loadModeltf.predict([1]));
-    // }
-    // alert(tf.tensor2d([[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]]));
-
-    // console.log(modelState.predictedValue);
 
     let modal;
     if (this.state.isModalOpen) {
