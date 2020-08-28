@@ -2,7 +2,7 @@
 
 This is React.js App to guess gender using TFJS based on their choices in their interests.
 
-![image-20200829014911126](C:\Users\Ninja Xpress\AppData\Roaming\Typora\typora-user-images\image-20200829014911126.png)
+![thumbnail](https://i.ibb.co/NCMLN4w/firefox-l-Bq-JIIWqek.jpg)
 
 Notebook: https://colab.research.google.com/drive/1r7UgKEcK7sj9hOmHEX2wicdwOLb4i9Gb?usp=sharing
 
