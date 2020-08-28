@@ -14,27 +14,26 @@ class ColorFormDetails extends Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
     return (
       <div className="Form">
         <div className="genie">
           <img src={logo} className="App-logo-Form" alt="logo" />
         </div>
         <div className="quiz">
-          <div class="cloud-question sb2">
+          <div className="cloud-question sb2">
             What is your favorite color?
           </div>
           <div className="Choice">
             <button className="item-choice" value="Cool" onClick={this.continue}>
-              <img src={cool}/>
+              <img src={cool} alt="Cool"/>
               <p>Cool</p>
             </button>
             <button className="item-choice" value="Neutral" onClick={this.continue}>
-              <img src={neutral}/>
+              <img src={neutral} alt="Neutral"/>
               <p>Neutral</p>
             </button>
             <button className="item-choice" value="Warm" onClick={this.continue}>
-              <img src={warm}/>
+              <img src={warm} alt="Warm"/>
               <p>Warm</p>
             </button>
           </div>

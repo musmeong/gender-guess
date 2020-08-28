@@ -23,46 +23,45 @@ class MusicFormDetails extends Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
     return (
       <div className="Form">
         <div className="genie">
           <img src={logo} className="App-logo-Form" alt="logo" />
         </div>
         <div className="quiz">
-          <div class="cloud-question sb2">
+          <div className="cloud-question sb2">
             What is your favorite music?
           </div>
           <div className="Choice">
             <div className="row-choice">
               <button className="item-choice" value="Electronic" onClick={this.continue}>
-                <img src={electronic}/>
+                <img src={electronic} alt="Electronic" />
                 <p>Electronic</p>
               </button>
               <button className="item-choice" value="Folk/Traditional" onClick={this.continue}>
-                <img src={folk}/>
+                <img src={folk} alt="Folk/Traditional" />
                 <p>Folk/Traditional</p>
               </button>
               <button className="item-choice" value="Hip Hop" onClick={this.continue}>
-                <img src={hiphop}/>
+                <img src={hiphop} alt="Hip Hop" />
                 <p>Hip Hop</p>
               </button>
               <button className="item-choice" value="Jazz/Blues" onClick={this.continue}>
-                <img src={jazz}/>
+                <img src={jazz} alt="Jazz/Blues" />
                 <p>Jazz/Blues</p>
               </button>
             </div>
             <div className="row-choice">
               <button className="item-choice" value="Pop" onClick={this.continue}>
-                <img src={pop}/>
+                <img src={pop} alt="Pop" />
                 <p>Pop</p>
               </button>
               <button className="item-choice" value="R&B and Soul" onClick={this.continue}>
-                <img src={rnb}/>
+                <img src={rnb} alt="R&B and Soul" />
                 <p>R&B and Soul</p>
               </button>
               <button className="item-choice" value="Rock" onClick={this.continue}>
-                <img src={rock}/>
+                <img src={rock} alt="Rock" />
                 <p>Rock</p>
               </button>
             </div>

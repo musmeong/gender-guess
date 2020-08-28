@@ -12,12 +12,8 @@ import nodrink from "../assets/nodrink.jpg";
 class BeverageFormDetails extends Component {
   continue = e => {
     e.preventDefault();
-    if (e.target.value === null) {
-      alert("??");
-    } else {
-      this.props.nextStep();
-      this.props.handleChange('beverage', e);
-    }
+    this.props.nextStep();
+    this.props.handleChange('beverage', e);
   };
 
   back = e => {
@@ -26,42 +22,41 @@ class BeverageFormDetails extends Component {
   };
 
   render() {
-    const { values } = this.props;
     return (
       <div className="Form">
         <div className="genie">
           <img src={logo} className="App-logo-Form" alt="logo" />
         </div>
         <div className="quiz">
-          <div class="cloud-question sb2">
+          <div className="cloud-question sb2">
             What is your favorite beverage?
           </div>
           <div className="Choice">
-            <div className="row-choice" value="Beer" onClick={this.continue}>
-              <button className="item-choice">
-                <img src={beer}/>
+            <div className="row-choice">
+              <button className="item-choice" value="Beer" onClick={this.continue}>
+                <img src={beer} alt="Beer" />
                 <p>Beer</p>
               </button>
               <button className="item-choice" value="Vodka" onClick={this.continue}>
-                <img src={vodka}/>
+                <img src={vodka} alt="Vodka" />
                 <p>Vodka</p>
               </button>
               <button className="item-choice" value="Whiskey" onClick={this.continue}>
-                <img src={whiskey}/>
+                <img src={whiskey} alt="Whiskey" />
                 <p>Whiskey</p>
               </button>
             </div>
             <div className="row-choice">
               <button className="item-choice" value="Wine" onClick={this.continue}>
-                <img src={wine}/>
+                <img src={wine} alt="Wine" />
                 <p>Wine</p>
               </button>
               <button className="item-choice" value="Other" onClick={this.continue}>
-                <img src={other}/>
+                <img src={other} alt="Other" />
                 <p>Other</p>
               </button>
               <button className="item-choice" value="Nothing" onClick={this.continue}>
-                <img src={nodrink}/>
+                <img src={nodrink} alt="Nothing" />
                 <p>Nothing</p>
               </button>
             </div>

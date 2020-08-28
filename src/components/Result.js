@@ -1,31 +1,50 @@
-import React from 'react';
-import logo from './genie.png';
-import './App.css';
+import React, { Component } from 'react';
+import logo from '../genie.png';
+import '../AppForm.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div class="intro-logo">
-          <div class="cloud-box-title sb1">
-            Welcome to <br/><span><b>Gender Guess</b></span>.
-          </div>
-          <img src={logo} className="App-logo" alt="logo" />
-          <div class="cloud-box-subtitle sb2">
-            I will guess your gender by asking <span>some of your interests</span>.
-          </div>
+class Result extends Component {
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+    this.props.handleChange('beverage', e);
+  };
+
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
+  render() {
+    const { predValue } = this.props;
+    let sex;
+    let finalPred;
+
+    if (predValue < 0.5 ) {
+      sex = "Female";
+      finalPred = 1 - predValue;
+    } else {
+      sex = "Male";
+      finalPred = predValue;
+    }
+
+    return (
+      <div className="Form">
+        <div className="genie">
+          <img src={logo} className="App-logo-Form" alt="logo" />
         </div>
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Start Game
-        </a>
-      </header>
-    </div>
-  );
+        <div className="quiz">
+          <div className="cloud-question sb2">
+            I am {Math.round(finalPred*100)}% sure that you are a {sex}
+          </div>
+          <input
+            className="Back-link"
+            type="submit"
+            onClick={this.continue}
+            value="Back" />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Result;

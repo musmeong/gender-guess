@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import logo from '../genie.png';
 import '../AppForm.css';
 
-import * as tf from '@tensorflow/tfjs';
-
-import modeltf from "../models/model.json";
 import sprite from "../assets/sprite.jpg";
 import cocacola from "../assets/cocacola.jpg";
 import fanta from "../assets/fanta.jpg";
@@ -14,8 +11,7 @@ class SoftdrinkFormDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false,
-      predictValue: ''
+      isModalOpen: false
     };
   }
 
@@ -25,6 +21,12 @@ class SoftdrinkFormDetails extends Component {
     this.props.handleChange('softdrink', e);
   }
 
+  handleClickSubmit() {
+    this.props.givePred();
+    this.props.nextStep();
+    this.setState({isModalOpen: false});
+  }
+
   handleClickClose() {
     this.setState({isModalOpen: false});
   }
@@ -32,29 +34,12 @@ class SoftdrinkFormDetails extends Component {
   back = e => {
     e.preventDefault();
     this.props.prevStep();
-  };
+  }
 
   render() {
     const {
       values: { color, music, beverage, softdrink }
     } = this.props;
-
-    
-    const loadModeltf = async () => {
-      const modelok = await tf.loadLayersModel('https://raw.githubusercontent.com/musmeong/gender-guess/master/src/models/model.json');
-      return modelok;
-    };
-    
-    let modelok = loadModeltf();
-
-    modelok.then(function (res) {
-      const data_test = tf.tensor([[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]]);
-      const example = data_test;
-      const prediction = res.predict(example);
-      console.log(prediction.dataSync());
-    }, function (err) {
-      console.log(err);
-    })
 
     let modal;
     if (this.state.isModalOpen) {
@@ -72,7 +57,7 @@ class SoftdrinkFormDetails extends Component {
             <div className="modal-button-nav">
               <button
                 className='modal-submit-btn'
-                onClick={() => this.handleClickClose()}
+                onClick={() => this.handleClickSubmit()}
               >
                 Submit
               </button>
@@ -102,13 +87,13 @@ class SoftdrinkFormDetails extends Component {
               <button className="item-choice"
                 value="7UP/Sprite"
                 onClick={(e) => {this.handleClickChoice(e)}}>
-                <img src={sprite}/>
+                <img src={sprite} alt="7UP/Sprite" />
                 <p>7UP/Sprite</p>
               </button>
               <button className="item-choice"
                 value="Coca Cola/Pepsi"
                 onClick={(e) => {this.handleClickChoice(e)}}>
-                <img src={cocacola}/>
+                <img src={cocacola} alt="Pepsi" />
                 <p>Coca Cola<br/>/Pepsi</p>
               </button>
             </div>
@@ -116,13 +101,13 @@ class SoftdrinkFormDetails extends Component {
               <button className="item-choice"
                 value="Fanta"
                 onClick={(e) => {this.handleClickChoice(e)}}>
-                <img src={fanta}/>
+                <img src={fanta} alt="Fanta" />
                 <p>Fanta</p>
               </button>
               <button className="item-choice"
                 value="Other"
                 onClick={(e) => {this.handleClickChoice(e)}}>
-                <img src={other}/>
+                <img src={other} alt="Other" />
                 <p>Other</p>
               </button>
             </div>

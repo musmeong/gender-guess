@@ -165,8 +165,7 @@
   width: 200px;
   padding: 16px 0;
   border: 0;
-  background-color: #218c74;
-  opacity: 100%;
+  background-color: rgba(33, 140, 116, 1.0);
   cursor: pointer;
   flex: auto;
   border-radius: 10px;
@@ -175,8 +174,7 @@
 }
 
 .modal-submit-btn:hover {
-  background-color: #218c74;
-  opacity: 80%;
+  background-color: rgba(33, 140, 116, 0.8);
   transition: 0.3s ease-in-out;
 }
 
@@ -188,16 +186,14 @@
   border-radius: 10px;
   border: 0;
   flex: auto;
-  background-color: #c0392b;
-  opacity: 100%;
+  background-color: rgba(192, 57, 43, 1.0);
   cursor: pointer;
   transition: 0.3s ease-in-out;
   margin: 0px 20px 10px 20px;
 }
 
 .modal-close-btn:hover {
-  background-color: #c0392b;
-  opacity: 80%;
+  background-color: rgba(192, 57, 43, 0.8);
   transition: 0.3s ease-in-out;
 }
 
