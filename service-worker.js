@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gender-guess/precache-manifest.15b0703c4cb56ecf72cc1b81678d814e.js"
+  "/gender-guess/precache-manifest.dbe8f9ddb92fb87e0f95175087146f6b.js"
 );
 
 self.addEventListener('message', (event) => {
