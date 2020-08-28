@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../genie.png';
 import '../AppForm.css';
 
-class Result extends Component {
+class ResultScreen extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -19,6 +19,7 @@ class Result extends Component {
     let sex;
     let finalPred;
 
+    // Change the final prob and give label based on prob
     if (predValue < 0.5 ) {
       sex = "Female";
       finalPred = 1 - predValue;
@@ -37,14 +38,14 @@ class Result extends Component {
             I am {Math.round(finalPred*100)}% sure that you are a {sex}
           </div>
           <input
-            className="Back-link"
+            className="Reset-link"
             type="submit"
             onClick={this.continue}
-            value="Back" />
+            value="Reset Game" />
         </div>
       </div>
     );
   }
 }
 
-export default Result;
+export default ResultScreen;

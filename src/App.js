@@ -5,10 +5,11 @@ import ColorFormDetails from './components/ColorFormDetails';
 import MusicFormDetails from './components/MusicFormDetails';
 import BeverageFormDetails from './components/BeverageFormDetails';
 import SoftdrinkFormDetails from './components/SoftdrinkFormDetails';
-import Result from './components/Result';
+import ResultScreen from './components/ResultScreen';
 
 import './App.css';
 import * as tf from '@tensorflow/tfjs';
+import IntroScreen from './components/IntroScreen';
 
 export class App extends React.Component {
   state = {
@@ -19,7 +20,7 @@ export class App extends React.Component {
   // Proceed to the next step
   nextStep = () => {
     const { step } = this.state;
-    // If on final page, click Continue (Reset) will Go Back to Main Menu
+    // If on final page, click the button will Go Back to Main Menu
     if (step !== 6) {
       this.setState({
         step: step + 1
@@ -44,6 +45,7 @@ export class App extends React.Component {
     this.setState({[input]: e.target.value});
   }
 
+  // This will change choice into data array (one-hot encoding)
   text_to_arr = (color, music, beverage, softdrink) => {
     let array_color;
     let array_music;
@@ -103,19 +105,26 @@ export class App extends React.Component {
     return data_predict;
   }
 
+  // Load TFJS Model from URL
   loadModeltf = async () => {
     const modeltf = await tf.loadLayersModel('https://raw.githubusercontent.com/musmeong/gender-guess/master/src/models/model.json');
     return modeltf;
   }
 
+  // Give prediction prob based on input data (from state)
   givePred = () => {
-    const { color, music, beverage, softdrink } = this.state;
+    const { step, color, music, beverage, softdrink } = this.state;
     const data = this.text_to_arr(color, music, beverage, softdrink);
     var that = this;
 
     this.loadModeltf().then(function (res) {
       const prediction = res.predict(data);
-      that.setState({predValue: prediction.dataSync()});
+      that.setState(
+        {
+          predValue: prediction.dataSync(),
+          step: step + 1
+        },
+      );
     }, function (err) {
       console.log(err);
     })
@@ -130,28 +139,9 @@ export class App extends React.Component {
     switch (step) {
       case 1:
         return (
-          <div className="App">
-            <header className="App-header">
-              <div className="intro-logo">
-                <div className="cloud-box-title sb1">
-                  <div className="cloud-text">
-                    Welcome to <br/><span><b>Gender Guess</b></span>.
-                  </div>
-                </div>
-                <img src={logo} className="App-logo" alt="logo" />
-                <div className="cloud-box-subtitle sb2">
-                  <div className="cloud-text">
-                    I will guess your gender by asking <span>some of your interests</span>.
-                  </div>
-                </div>
-              </div>
-              <input
-                className="App-link"
-                type="submit"
-                onClick={this.nextStep}
-                value="Start Game" />
-            </header>
-          </div>
+          <IntroScreen
+            nextStep={this.nextStep}
+          />
         );
       case 2:
         return (
@@ -159,7 +149,7 @@ export class App extends React.Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
           />
-        )
+        );
       case 3:
         return (
           <MusicFormDetails
@@ -167,7 +157,7 @@ export class App extends React.Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
           />
-        )
+        );
       case 4:
         return (
           <BeverageFormDetails
@@ -175,7 +165,7 @@ export class App extends React.Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
           />
-        )
+        );
       case 5:
         return (
           <SoftdrinkFormDetails
@@ -185,16 +175,16 @@ export class App extends React.Component {
             givePred={this.givePred}
             values={values}
           />
-        )
+        );
       case 6:
         return (
-          <Result
+          <ResultScreen
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
             predValue={predValue}
           />
-        )
+        );
       default:
         console.log('nothing');
     }

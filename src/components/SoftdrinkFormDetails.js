@@ -15,6 +15,7 @@ class SoftdrinkFormDetails extends Component {
     };
   }
 
+  // Last choice will trigger modal section to true
   handleClickChoice(e) { 
     e.preventDefault();
     this.setState({isModalOpen: true});
@@ -23,8 +24,6 @@ class SoftdrinkFormDetails extends Component {
 
   handleClickSubmit() {
     this.props.givePred();
-    this.props.nextStep();
-    this.setState({isModalOpen: false});
   }
 
   handleClickClose() {

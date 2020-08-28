@@ -104,6 +104,31 @@
   background-color: rgba(225, 112, 85, 1);
 }
 
+.Reset-link {
+  color: #000;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  height: 60px;
+  line-height: 55px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  padding: 0px 200px;
+  background-color: rgba(48, 214, 184, 0.6);
+  border: 2px solid #30d6b8;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.Reset-link:hover {
+  background-color: rgba(48, 214, 184, 1);
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -256,7 +281,7 @@
     width: 150px;
   }
 
-  .Back-link {
+  .Back-link, .Reset-link {
     padding: 0px 100px;
     margin-bottom: 40px;
   }
