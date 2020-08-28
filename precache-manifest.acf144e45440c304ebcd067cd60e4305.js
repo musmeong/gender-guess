@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "228fd9837f173530266851710901026e",
+    "revision": "f698830c7d59f842799ff67447b454fc",
     "url": "/gender-guess/index.html"
   },
   {
-    "revision": "8e09ee2281141b68980d",
+    "revision": "06d71b43af7125f2e7c3",
     "url": "/gender-guess/static/css/main.5c678ef3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gender-guess/static/js/2.ee8ab4d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e09ee2281141b68980d",
-    "url": "/gender-guess/static/js/main.22880275.chunk.js"
+    "revision": "06d71b43af7125f2e7c3",
+    "url": "/gender-guess/static/js/main.fc38e446.chunk.js"
   },
   {
     "revision": "47ed8cdb52a2e3ca8f47",
