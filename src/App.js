@@ -8,7 +8,7 @@ import './App.css';
 
 export class App extends React.Component {
   state = {
-    step: 1
+    step: 5
   }
 
   // Proceed to the next step
@@ -41,15 +41,15 @@ export class App extends React.Component {
         return (
           <div className="App">
             <header className="App-header">
-              <div class="intro-logo">
-                <div class="cloud-box-title sb1">
-                  <div class="cloud-text">
+              <div className="intro-logo">
+                <div className="cloud-box-title sb1">
+                  <div className="cloud-text">
                     Welcome to <br/><span><b>Gender Guess</b></span>.
                   </div>
                 </div>
                 <img src={logo} className="App-logo" alt="logo" />
-                <div class="cloud-box-subtitle sb2">
-                  <div class="cloud-text">
+                <div className="cloud-box-subtitle sb2">
+                  <div className="cloud-text">
                     I will guess your gender by asking <span>some of your interests</span>.
                   </div>
                 </div>
@@ -97,6 +97,8 @@ export class App extends React.Component {
             values={values}
           />
         )
+      default:
+        console.log('nothing');
     }
   }
 }
