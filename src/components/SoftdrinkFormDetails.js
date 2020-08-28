@@ -10,13 +10,6 @@ import sprite from "../assets/sprite.jpg";
 import cocacola from "../assets/cocacola.jpg";
 import fanta from "../assets/fanta.jpg";
 import other from "../assets/othersoft.jpg";
-// modelok.then(function (res) {
-//   const example = tf.tensor2d([[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]]);
-//   const prediction = res.predict(example);
-//   console.log(prediction);
-// }, function (err) {
-//   console.log(err);
-// })
 
 class SoftdrinkFormDetails extends Component {
   constructor(props) {
@@ -59,14 +52,25 @@ class SoftdrinkFormDetails extends Component {
 
     
     const loadModeltf = async () => {
-      const handler = tf.io.browserFiles(modeltf);
-      const modelok = await tf.loadLayersModel(handler);
+      // const handler = tf.io.browserFiles(modeltf);
+      const modelok = await tf.loadLayersModel('https://raw.githubusercontent.com/musmeong/gender-guess/master/src/models/model.json');
       return modelok;
     };
     
     let modelok = loadModeltf();
 
-    
+    modelok.then(function (res) {
+      const data_test = tf.tensor([[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]]);
+      // const example = tf.reshape(data_test, [1,20]);
+      // console.log(data_test.shape);
+      // console.log(new Uint8Array(buffer))
+      const example = data_test;
+      // console.log(example);
+      const prediction = res.predict(example);
+      console.log(prediction.dataSync());
+    }, function (err) {
+      console.log(err);
+    })
 
     // await model = tf.loadLayersModel(modeltf);
 
