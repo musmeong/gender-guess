@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/gender-guess/static/css/main.5c678ef3.chunk.css",
-    "main.js": "/gender-guess/static/js/main.13cd1c17.chunk.js",
-    "main.js.map": "/gender-guess/static/js/main.13cd1c17.chunk.js.map",
+    "main.js": "/gender-guess/static/js/main.53003825.chunk.js",
+    "main.js.map": "/gender-guess/static/js/main.53003825.chunk.js.map",
     "runtime-main.js": "/gender-guess/static/js/runtime-main.f57b4b55.js",
     "runtime-main.js.map": "/gender-guess/static/js/runtime-main.f57b4b55.js.map",
-    "static/js/2.0b8eb49f.chunk.js": "/gender-guess/static/js/2.0b8eb49f.chunk.js",
-    "static/js/2.0b8eb49f.chunk.js.map": "/gender-guess/static/js/2.0b8eb49f.chunk.js.map",
+    "static/js/2.039c4712.chunk.js": "/gender-guess/static/js/2.039c4712.chunk.js",
+    "static/js/2.039c4712.chunk.js.map": "/gender-guess/static/js/2.039c4712.chunk.js.map",
     "index.html": "/gender-guess/index.html",
-    "precache-manifest.dbe8f9ddb92fb87e0f95175087146f6b.js": "/gender-guess/precache-manifest.dbe8f9ddb92fb87e0f95175087146f6b.js",
+    "precache-manifest.6213fa74bf58b95a19b1dcbe9d7c78dd.js": "/gender-guess/precache-manifest.6213fa74bf58b95a19b1dcbe9d7c78dd.js",
     "service-worker.js": "/gender-guess/service-worker.js",
     "static/css/main.5c678ef3.chunk.css.map": "/gender-guess/static/css/main.5c678ef3.chunk.css.map",
-    "static/js/2.0b8eb49f.chunk.js.LICENSE.txt": "/gender-guess/static/js/2.0b8eb49f.chunk.js.LICENSE.txt",
+    "static/js/2.039c4712.chunk.js.LICENSE.txt": "/gender-guess/static/js/2.039c4712.chunk.js.LICENSE.txt",
     "static/media/AppForm.css": "/gender-guess/static/media/banner.86329c17.jpg",
     "static/media/electronic.jpg": "/gender-guess/static/media/electronic.39eb2629.jpg",
     "static/media/folk.jpg": "/gender-guess/static/media/folk.a5955728.jpg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f57b4b55.js",
-    "static/js/2.0b8eb49f.chunk.js",
+    "static/js/2.039c4712.chunk.js",
     "static/css/main.5c678ef3.chunk.css",
-    "static/js/main.13cd1c17.chunk.js"
+    "static/js/main.53003825.chunk.js"
   ]
 }
