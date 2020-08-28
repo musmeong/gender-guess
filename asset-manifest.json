@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gender-guess/static/css/main.443e9e8a.chunk.css",
-    "main.js": "/gender-guess/static/js/main.f189b96c.chunk.js",
-    "main.js.map": "/gender-guess/static/js/main.f189b96c.chunk.js.map",
+    "main.css": "/gender-guess/static/css/main.141678be.chunk.css",
+    "main.js": "/gender-guess/static/js/main.1b001374.chunk.js",
+    "main.js.map": "/gender-guess/static/js/main.1b001374.chunk.js.map",
     "runtime-main.js": "/gender-guess/static/js/runtime-main.f57b4b55.js",
     "runtime-main.js.map": "/gender-guess/static/js/runtime-main.f57b4b55.js.map",
-    "static/js/2.70de7bdb.chunk.js": "/gender-guess/static/js/2.70de7bdb.chunk.js",
-    "static/js/2.70de7bdb.chunk.js.map": "/gender-guess/static/js/2.70de7bdb.chunk.js.map",
+    "static/js/2.ee8ab4d6.chunk.js": "/gender-guess/static/js/2.ee8ab4d6.chunk.js",
+    "static/js/2.ee8ab4d6.chunk.js.map": "/gender-guess/static/js/2.ee8ab4d6.chunk.js.map",
     "index.html": "/gender-guess/index.html",
-    "precache-manifest.2436a4ceec6900443f3287e9457d8796.js": "/gender-guess/precache-manifest.2436a4ceec6900443f3287e9457d8796.js",
+    "precache-manifest.039eebbb4eb9f46c8c41df449d64c557.js": "/gender-guess/precache-manifest.039eebbb4eb9f46c8c41df449d64c557.js",
     "service-worker.js": "/gender-guess/service-worker.js",
-    "static/css/main.443e9e8a.chunk.css.map": "/gender-guess/static/css/main.443e9e8a.chunk.css.map",
-    "static/js/2.70de7bdb.chunk.js.LICENSE.txt": "/gender-guess/static/js/2.70de7bdb.chunk.js.LICENSE.txt",
+    "static/css/main.141678be.chunk.css.map": "/gender-guess/static/css/main.141678be.chunk.css.map",
+    "static/js/2.ee8ab4d6.chunk.js.LICENSE.txt": "/gender-guess/static/js/2.ee8ab4d6.chunk.js.LICENSE.txt",
     "static/media/AppForm.css": "/gender-guess/static/media/banner.86329c17.jpg",
     "static/media/beer.jpg": "/gender-guess/static/media/beer.2f76ae1c.jpg",
     "static/media/cool.jpg": "/gender-guess/static/media/cool.2f9b6375.jpg",
@@ -35,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f57b4b55.js",
-    "static/js/2.70de7bdb.chunk.js",
-    "static/css/main.443e9e8a.chunk.css",
-    "static/js/main.f189b96c.chunk.js"
+    "static/js/2.ee8ab4d6.chunk.js",
+    "static/css/main.141678be.chunk.css",
+    "static/js/main.1b001374.chunk.js"
   ]
 }
