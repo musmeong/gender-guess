@@ -16,6 +16,14 @@ class SoftdrinkFormDetails extends Component {
     };
   }
 
+  fetchData = () => {
+    this.setState({loadinginButton: true});
+
+    setTimeout(() => {
+      this.setState({loadinginButton: false});
+    }, 15000);
+  }
+
   // Last choice will trigger modal section to true
   handleClickChoice(e) { 
     e.preventDefault();
@@ -35,14 +43,6 @@ class SoftdrinkFormDetails extends Component {
   back = e => {
     e.preventDefault();
     this.props.prevStep();
-  }
-
-  fetchData = () => {
-    this.setState({loadinginButton: true});
-
-    setTimeout(() => {
-      this.setState({loadinginButton: false});
-    }, 5000);
   }
 
   render() {
