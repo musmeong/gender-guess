@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './genie.png';
 
 import ColorFormDetails from './components/ColorFormDetails';
 import MusicFormDetails from './components/MusicFormDetails';
