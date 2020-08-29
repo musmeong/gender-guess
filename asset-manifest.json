@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/gender-guess/static/css/main.0f22b70c.chunk.css",
-    "main.js": "/gender-guess/static/js/main.c7857cf5.chunk.js",
-    "main.js.map": "/gender-guess/static/js/main.c7857cf5.chunk.js.map",
+    "main.js": "/gender-guess/static/js/main.beef1caa.chunk.js",
+    "main.js.map": "/gender-guess/static/js/main.beef1caa.chunk.js.map",
     "runtime-main.js": "/gender-guess/static/js/runtime-main.f57b4b55.js",
     "runtime-main.js.map": "/gender-guess/static/js/runtime-main.f57b4b55.js.map",
-    "static/js/2.92b4fff1.chunk.js": "/gender-guess/static/js/2.92b4fff1.chunk.js",
-    "static/js/2.92b4fff1.chunk.js.map": "/gender-guess/static/js/2.92b4fff1.chunk.js.map",
+    "static/js/2.d89dba84.chunk.js": "/gender-guess/static/js/2.d89dba84.chunk.js",
+    "static/js/2.d89dba84.chunk.js.map": "/gender-guess/static/js/2.d89dba84.chunk.js.map",
     "index.html": "/gender-guess/index.html",
-    "precache-manifest.e7e61fb9dd1903bfb63c20e329183373.js": "/gender-guess/precache-manifest.e7e61fb9dd1903bfb63c20e329183373.js",
+    "precache-manifest.498ef0935349f3b9e0f81f405ad9203a.js": "/gender-guess/precache-manifest.498ef0935349f3b9e0f81f405ad9203a.js",
     "service-worker.js": "/gender-guess/service-worker.js",
     "static/css/main.0f22b70c.chunk.css.map": "/gender-guess/static/css/main.0f22b70c.chunk.css.map",
-    "static/js/2.92b4fff1.chunk.js.LICENSE.txt": "/gender-guess/static/js/2.92b4fff1.chunk.js.LICENSE.txt",
+    "static/js/2.d89dba84.chunk.js.LICENSE.txt": "/gender-guess/static/js/2.d89dba84.chunk.js.LICENSE.txt",
     "static/media/electronic.jpg": "/gender-guess/static/media/electronic.39eb2629.jpg",
     "static/media/folk.jpg": "/gender-guess/static/media/folk.a5955728.jpg",
     "static/media/genie.png": "/gender-guess/static/media/genie.89bb2309.png",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f57b4b55.js",
-    "static/js/2.92b4fff1.chunk.js",
+    "static/js/2.d89dba84.chunk.js",
     "static/css/main.0f22b70c.chunk.css",
-    "static/js/main.c7857cf5.chunk.js"
+    "static/js/main.beef1caa.chunk.js"
   ]
 }
