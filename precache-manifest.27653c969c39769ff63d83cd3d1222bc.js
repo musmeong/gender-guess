@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "78a388422c61b5ba2eabf203a54671e6",
+    "revision": "ebe76854e7e34bfe76238ce0ccab6683",
     "url": "/gender-guess/index.html"
   },
   {
-    "revision": "a150fa6fc9377c5eb5eb",
-    "url": "/gender-guess/static/css/main.9bac0985.chunk.css"
+    "revision": "53e4c0185bf00a00abae",
+    "url": "/gender-guess/static/css/main.0f22b70c.chunk.css"
   },
   {
     "revision": "1391ebf8d41f25ceddca",
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gender-guess/static/js/2.92b4fff1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a150fa6fc9377c5eb5eb",
+    "revision": "53e4c0185bf00a00abae",
     "url": "/gender-guess/static/js/main.7e6596ff.chunk.js"
   },
   {
     "revision": "47ed8cdb52a2e3ca8f47",
     "url": "/gender-guess/static/js/runtime-main.f57b4b55.js"
-  },
-  {
-    "revision": "86329c1706da74331b87432c4cd1be91",
-    "url": "/gender-guess/static/media/banner.86329c17.jpg"
   },
   {
     "revision": "39eb262987e15bac03edcb19f5b4097f",
