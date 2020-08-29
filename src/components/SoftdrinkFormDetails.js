@@ -11,7 +11,8 @@ class SoftdrinkFormDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false
+      isModalOpen: false,
+      loadinginButton: false
     };
   }
 
@@ -24,6 +25,7 @@ class SoftdrinkFormDetails extends Component {
 
   handleClickSubmit() {
     this.props.givePred();
+    this.fetchData();
   }
 
   handleClickClose() {
@@ -33,6 +35,14 @@ class SoftdrinkFormDetails extends Component {
   back = e => {
     e.preventDefault();
     this.props.prevStep();
+  }
+
+  fetchData = () => {
+    this.setState({loadinginButton: true});
+
+    setTimeout(() => {
+      this.setState({loadinginButton: false});
+    }, 5000);
   }
 
   render() {
@@ -56,9 +66,17 @@ class SoftdrinkFormDetails extends Component {
             <div className="modal-button-nav">
               <button
                 className='modal-submit-btn'
+                disabled={this.state.loadinginButton}
                 onClick={() => this.handleClickSubmit()}
               >
-                Submit
+                {this.state.loadinginButton && (
+                  <i
+                    className="fa fa-refresh fa-spin"
+                    style={{ marginRight: "5px" }}
+                  />
+                )}
+                {this.state.loadinginButton && <span>Loading</span>}
+                {!this.state.loadinginButton && <span>Submit</span>}
               </button>
               <button
                 className='modal-close-btn'

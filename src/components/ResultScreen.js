@@ -35,7 +35,10 @@ class ResultScreen extends Component {
         </div>
         <div className="quiz">
           <div className="cloud-question sb2">
-            I am {Math.round(finalPred*100)}% sure that you are a {sex}
+            <div className="cloud-text" style={{ "font-size": "50px" }}> 
+              I am <span>{Math.round(finalPred*100)}% </span>
+              sure that you are a <span>{sex}</span>.
+            </div>
           </div>
           <input
             className="Reset-link"
